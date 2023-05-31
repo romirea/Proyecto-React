@@ -69,4 +69,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-import { Navbar } from "react-bootstrap";
