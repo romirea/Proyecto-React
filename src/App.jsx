@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App(){
 
-  const clickear = () => console.log("Hola mundo")
-
   return(
       <div>
         <NavBar/>
