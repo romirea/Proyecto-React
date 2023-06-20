@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cuadro Milano",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 1500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "cuadros"
+    },
+    {
+        "id": 2,
+        "nombre": "Jarron Matisse",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 2500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "deco"
+
+    },
+    {
+        "id": 3,
+        "nombre": "Sillon Grey",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 3500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "muebles"
+
+    },
+    {
+        "id": 4,
+        "nombre": "Jarron Stripes",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 4500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "deco"
+
+    },
+    {
+        "id": 5,
+        "nombre": "Vaso Mallorca",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 5500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "deco"
+    },
+    {
+        "id": 6,
+        "nombre": "Mesa Stone",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 6500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "muebles"
+
+    },
+    {
+        "id": 7,
+        "nombre": "Cuadro Sienna",
+        "descripcion": "3 cuotas sin interés de",
+        "precio": 6500,
+        "img": "https://dummyimage.com/200x200/000/fff",
+        "category": "cuadros"
+
+    }
+]
