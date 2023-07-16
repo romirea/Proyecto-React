@@ -1,33 +1,38 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { pedirDatos } from '../../Helpers/PedirDatos'
-// import ItemListContainer from "../../styles/components/ItemListContainer"
-import "../../components/ItemListContainer/ItemListContainer"
+import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../firebase/config'
 
 
-const ItemListContainer = ({greeting}) =>{
+const ItemListContainer = () =>{
 
 
     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+    console.log(productos)
 
-    const {categoryId} = useParams()
-    console.log(categoryId)
-    
+    const {categoryId} = useParams()    
 
 
     useEffect(() => {
-                pedirDatos()
-                    .then((res) => {
-                        if(!categoryId) {
-                            setProductos(res)
-                        } else {
-                            setProductos( res.filter((item) => item.category === categoryId) )
-                        }
-                    })
-                    .catch((error) => {console.log(error)})
-                    }, [categoryId])
+        setLoading(true)
+        setLoading(true)
+
+        const productosRef = collection(db, "productos")
+        const q = categoryId
+            ? query(productosRef, where("category", "==", categoryId))
+            : productosRef
+
+        getDocs(q)
+            .then((resp) => {
+                const items = resp.docs.map((doc) => ({...doc.data(), id: doc.id}))
+                setProductos(items)
+            })
+            .catch(e => console.log(e))
+            .finally(() => setLoading(false))
+
+    }, [categoryId])
 
             return (
                     <div className="container my-5">
@@ -40,13 +45,3 @@ export default ItemListContainer
 
 
 
-
-
-//ELIMINADO, ANTERIOR:
-//     return(
-//         <div className="list_container">
-//             <h2>RS Home</h2>
-//             <p>{greeting}</p>
-//         </div>
-//     )
-// }

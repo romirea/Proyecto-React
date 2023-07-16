@@ -9,3 +9,11 @@ export default {
   plugins: [],
 }
 
+
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    require('@tailwindcss/aspect-ratio'),
+  ],
+}

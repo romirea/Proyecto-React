@@ -7,8 +7,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import { NavDropdown } from 'react-bootstrap';
 
 
-
-
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
