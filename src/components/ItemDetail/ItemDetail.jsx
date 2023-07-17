@@ -1,6 +1,6 @@
 
 import { useContext, useState, useMemo } from "react"
-import { ItemCount } from "../ItemCount/ItemCount"
+import {ItemCount} from "../ItemCount/ItemCount"
 import { Link, useNavigate } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 

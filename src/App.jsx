@@ -20,7 +20,7 @@ import { CartContext } from "./context/CartContext"
 import Cart from "./components/Cart/Cart"
 import Error404 from "./components/Error404/Error404"
 import Login from "./components/Auth/Login"
-import Ejemplo from "./components/Prueba/Prueba"
+import Checkout from "./components/Checkout/Checkout"
 
 
 function App(){
@@ -36,10 +36,10 @@ function App(){
           <Route path="/productos/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/ejemplo" element={<Ejemplo />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="*" element={ <Error404 />}/>
+          <Route path="/checkout" element={ <Checkout />}/>
           {/* <Login></Login> */}
           {/* {
             logeado && <>
