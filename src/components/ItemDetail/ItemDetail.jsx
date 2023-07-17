@@ -25,7 +25,7 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
         
         agregarAlCarrito(item)
     }
-
+    
     
     const handleVolver = () => {
         navigate(-1)
