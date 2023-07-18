@@ -6,7 +6,6 @@ import { useCartContext } from "../../context/CartContext"
 
 const Checkout = () => {
     const {cart, totalCompra} = useCartContext()
-
     
     const [orderId, setOrderId] = useState(null)
 
@@ -55,6 +54,14 @@ const handleSubmit = (e) => {
             .catch(err => console.log(err))
     }   
 
+    if (orderId){
+        return(
+            <div className="container my-5">
+                <p>Tu compra se registró bajo el código: <strong>{orderId}</strong></p>
+
+            </div>
+        )
+    }
 
     if (cart.length === 0){
         return <Navigate to= "/"/>
